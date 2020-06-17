@@ -5,10 +5,10 @@ Create bi/tri-grams out of column data. The bi/trigram are **created for each ro
 
 ## Requirements
 1. python 3.*
-2. pip
+2. pip3
 
 ## Installation
-`pip install -r requirements.txt`
+`pip3 install -r requirements.txt`
 
 ## How to Run
 Simply pass the column of text within your DataFrame to the `runner()` function. The `runner()` function returns a list of n-grams. 
@@ -23,7 +23,7 @@ dummy_data = pd.DataFrame({"input_text": ["I like pie",
                                           "I like to watch movies on the weekends"]})
 bigrams = runner(dummy_data['input_text'], stopwords=["like"]) # add "like" to the list of stopwords
 
-print(bigrams)
+print(bigrams) # prints a list of three bigrams (one for each row)
 ```
 
 ## Additional Details
