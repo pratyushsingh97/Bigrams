@@ -1,7 +1,7 @@
 # Create Bigrams
 by: Pratyush Singh
 
-Create bi/trigram out of column data. The bi/trigram are created for each row within the data.
+Create bi/tri-grams out of column data. The bi/trigram are **created for each row within the data**. This application is different than other use-cases where bi/trigrams are created for the entire text as a whole. In this case, a bi/tri-gram is created for each rowwithin the data after pre-processesing.
 
 ## Requirements
 1. python 3.*
@@ -28,5 +28,6 @@ print(bigrams)
 
 ## Additional Details
 1. `bigrams.py` utilizes the nltk library to score each bi/tri-gram created for each input text. The highest rated bi/tri-gram is returned. If no bi/tr-grams exist within the data, then the original text is returned.
+2. This function only works on pandas.core.series.Series objects right now. In most cases, this is equivalent to the column you wish to analyze (i.e. `dummy_data['input_text']`) 
 
 
