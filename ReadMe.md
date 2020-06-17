@@ -28,5 +28,6 @@ print(bigrams)
 
 ## Additional Details
 1. `bigrams.py` utilizes the nltk library to score each bi/tri-gram created for each input text. The highest rated bi/tri-gram is returned. If no bi/tr-grams exist within the data, then the original text is returned.
+2. This function only works on pandas.core.series.Series objects right now. In most cases, this is equivalent to the column you wish to analyze (i.e. `dummy_data['input_text']`) 
 
 
