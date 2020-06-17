@@ -1,7 +1,7 @@
 # Create Bigrams
 by: Pratyush Singh
 
-Create bi/trigram out of column data. The bi/trigram are created for each row within the data.
+Create bi/tri-grams out of column data. The bi/trigram are **created for each row within the data**. This application is different than other use-cases where bi/trigrams are created for the entire text as a whole. In this case, each row is regarded as an independent body of text
 
 ## Requirements
 1. python 3.*
