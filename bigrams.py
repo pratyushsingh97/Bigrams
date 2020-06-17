@@ -6,9 +6,9 @@ from nltk.corpus import stopwords
 
 nltk.download('stopwords')
 nltk.download('punkt')
+nltk.download('wordnet')
+
 stopset = set(stopwords.words('english'))
-
-
 stops = [word for word in stopwords.words('english')]
 bigram_measures = nltk.collocations.BigramAssocMeasures()
 trigram_measures = nltk.collocations.TrigramAssocMeasures()
