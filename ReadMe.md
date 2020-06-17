@@ -27,7 +27,8 @@ print(bigrams)
 ```
 
 ## Additional Details
-1. `bigrams.py` utilizes the nltk library to score each bi/tri-gram created for each input text. The highest rated bi/tri-gram is returned. If no bi/tr-grams exist within the data, then the original text is returned.
-2. This function only works on `pandas.core.series.Series` objects right now. In most cases, this is equivalent to the column within your pandas DataFrame you wish to analyze (i.e. `dummy_data['input_text']`)
+1. `bigrams.py` utilizes the nltk library to score each bi/tri-gram created for each input text. The highest rated bi/tri-gram is returned. If no bi/tr-grams exist within the data, then the original text is returned.f
+2. `bigrams.py` lemmatizes the words in the input text, so similar phrases will lead to the same bigram. For example "I am eating pie" and "I eat pie" result in the same bigram "eat_pie".
+3. This function only works on `pandas.core.series.Series` objects right now. In most cases, this is equivalent to the column within your pandas DataFrame you wish to analyze (i.e. `dummy_data['input_text']`)
 
 
