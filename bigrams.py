@@ -14,13 +14,11 @@ bigram_measures = nltk.collocations.BigramAssocMeasures()
 trigram_measures = nltk.collocations.TrigramAssocMeasures()
 wordnet_lemmatizer = WordNetLemmatizer()
 
-def _stopwords(extend_stopwords=None) -> list:
+def _stopwords(extend_stopwords=None) -> None:
     if type(extend_stopwords) == list:
         stops.extend(extend_stopwords)
     if type(extend_stopwords) == str:
         stops.append(extend_stopwords)
-    
-    return stops
     
 def _collocations(text:str) -> str:
     """This is a helper function that creates bigrams out of the text.
