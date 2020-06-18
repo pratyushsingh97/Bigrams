@@ -1,4 +1,3 @@
-import pandas as pd
 import nltk
 from nltk.collocations import *
 from nltk.stem import WordNetLemmatizer
@@ -45,7 +44,7 @@ def _collocations(text:str) -> str:
     
     return f"{bigram[0][0]}_{bigram[0][1]}"
 
-def _create_bigrams(col: pd.Series) -> list:
+def _create_bigrams(col: pd.core.series.Series) -> list:
     """ Helper function to take the column of text and return the bigrams 
     based on the input text
     
@@ -68,6 +67,6 @@ def _create_bigrams(col: pd.Series) -> list:
     except Exception as e:
         print(e)
     
-def runner(col: pd.Series, stopwords=None):
+def runner(col: pd.core.series.Series, stopwords=None):
     _stopwords(stopwords)
     return _create_bigrams(col)
