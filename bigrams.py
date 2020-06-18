@@ -1,3 +1,4 @@
+import pandas as pd
 import nltk
 from nltk.collocations import *
 from nltk.stem import WordNetLemmatizer
