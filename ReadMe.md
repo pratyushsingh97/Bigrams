@@ -41,7 +41,7 @@ import pandas as pd
 dummy_data = pd.DataFrame({"input_text": ["I like pie", 
                                           "I like to eat", 
                                           "I like to watch movies on the weekends"]})
-bigrams = runner(dummy_data['input_text'], stopwords=["like"]) # add "like" to the list of stopwords
+bigrams = bigrams.runner(dummy_data['input_text'], stopwords=["like"]) # add "like" to the list of stopwords
 print(bigrams) # prints a list of three bigrams (one for each row)
 ```
 
