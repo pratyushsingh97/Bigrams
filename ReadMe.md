@@ -10,6 +10,12 @@ Create bi/tri-grams out of column data. The bi/trigram are **created for each ro
 ## Installation
 `pip3 install -r requirements.txt`
 
+### Using it in Jupyter Notebooks
+```bash
+!pip install -r https://raw.githubusercontent.com/pratyushsingh97/Bigrams/master/requirements.txt
+!curl -O https://raw.githubusercontent.com/pratyushsingh97/Bigrams/master/bigrams.py
+```
+
 ## How to Run
 Simply pass the column of text within your DataFrame to the `runner()` function. The `runner()` function returns a list of n-grams. 
 ### Adding Stopwords
@@ -27,8 +33,8 @@ print(bigrams) # prints a list of three bigrams (one for each row)
 ```
 
 ## Additional Details
-1. `bigrams.py` utilizes the nltk library to score each bi/tri-gram created for each input text. The highest rated bi/tri-gram is returned. If no bi/tr-grams exist within the data, then the original text is returned.f
+1. `bigrams.py` utilizes the nltk library to score each bi/tri-gram created for each input text. The highest rated bi/tri-gram is returned. If no bi/tr-grams exist within the data, then the original text is returned.
 2. `bigrams.py` lemmatizes the words in the input text, so similar phrases will lead to the same bigram. For example "I am eating pie" and "I eat pie" result in the same bigram "eat_pie".
-3. This function only works on `pandas.core.series.Series` objects right now. In most cases, this is equivalent to the column within your pandas DataFrame you wish to analyze (i.e. `dummy_data['input_text']`)
+3. This function only works on `pandas.core.series.Series` objects right now. In most cases, this is equivalent to the column within your pandas DataFrame you wish to analyze (i.e. `dummy_data['input_text']`).
 
 
