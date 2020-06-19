@@ -1,3 +1,4 @@
+
 import pandas as pd
 import nltk
 from nltk.collocations import *
@@ -45,7 +46,7 @@ def _collocations(text:str) -> str:
     
     return f"{bigram[0][0]}_{bigram[0][1]}"
 
-def _create_bigrams(col: pd.core.series.Series) -> list:
+def _create_bigrams(col: pd.Series) -> list:
     """ Helper function to take the column of text and return the bigrams 
     based on the input text
     
@@ -56,7 +57,7 @@ def _create_bigrams(col: pd.core.series.Series) -> list:
         bigrams: list of bigrams and in some cases unigrams (when bigrams don't exist)
     """
     
-    if type(col) != pd.core.series.Series:
+    if type(col) != pd.Series:
         raise TypeError("The parameter passed must be a Series object.Pass the column you wish to create n-grams out of.")
     try:
         bigrams = []
@@ -71,3 +72,14 @@ def _create_bigrams(col: pd.core.series.Series) -> list:
 def runner(col: pd.core.series.Series, stopwords=None):
     _stopwords(stopwords)
     return _create_bigrams(col)
+
+
+
+import pandas as pd
+
+dummy_data = pd.DataFrame({"input_text": ["I like pie", 
+                                          "I like to eat", 
+                                          "I like to watch movies on the weekends"]})
+bigrams = runner(dummy_data['input_text'], stopwords=["like"]) # add "like" to the list of stopwords
+
+print(bigrams) # prints a list of three bigrams (one for each row)
