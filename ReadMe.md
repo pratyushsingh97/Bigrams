@@ -10,8 +10,8 @@ Create bi/tri-grams out of column data. The bi/trigram are **created for each ro
 ## Installation
 `pip3 install -r requirements.txt`
 
-### Using it in Jupyter Notebooks
-```bash
+### Installation in Jupyter Notebooks
+```
 !pip install -r https://raw.githubusercontent.com/pratyushsingh97/Bigrams/master/requirements.txt
 !curl -O https://raw.githubusercontent.com/pratyushsingh97/Bigrams/master/bigrams.py
 ```
@@ -29,6 +29,19 @@ dummy_data = pd.DataFrame({"input_text": ["I like pie",
                                           "I like to watch movies on the weekends"]})
 bigrams = runner(dummy_data['input_text'], stopwords=["like"]) # add "like" to the list of stopwords
 
+print(bigrams) # prints a list of three bigrams (one for each row)
+```
+
+### Usage in Jupyter Notebook
+*Make sure to follow the installation steps for Jupyter Notebooks.*
+```python
+import bigrams
+import pandas as pd
+
+dummy_data = pd.DataFrame({"input_text": ["I like pie", 
+                                          "I like to eat", 
+                                          "I like to watch movies on the weekends"]})
+bigrams = runner(dummy_data['input_text'], stopwords=["like"]) # add "like" to the list of stopwords
 print(bigrams) # prints a list of three bigrams (one for each row)
 ```
 
