@@ -62,6 +62,8 @@ def _create_bigrams(col: pd.Series) -> list:
     try:
         bigrams = []
         for index, value in col.items():
+            if type(value) != str:
+                continue
             bigram = _collocations(value)
             bigrams.append(bigram)
 
