@@ -9,6 +9,7 @@ from nltk.corpus import stopwords
 nltk.download('stopwords')
 nltk.download('punkt')
 nltk.download('wordnet')
+nltk.download('omw-1.4')
 
 stopset = set(stopwords.words('english'))
 stops = [word for word in stopwords.words('english')]
